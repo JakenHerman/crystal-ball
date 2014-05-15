@@ -12,5 +12,7 @@
 - (IBAction)buttonPressed;
 
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
+@property (strong, nonatomic) NSArray *predictions;
+
 
 @end

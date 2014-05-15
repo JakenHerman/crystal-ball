@@ -17,7 +17,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    }
+    
+    self.predictions = [[NSArray alloc] initWithObjects:@"It is certain",@"It is decidedly so", @"All signs say Yes", @"The stars are not alligned", @"My reply is no", @"It is doubtful", @"Better not tell you now", @"Concentrate and ask again", @"Unable to answer right now.", nil];
+    
+
+}
 
 - (void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -31,8 +35,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonPressed {
-    self.predictionLabel.text = @"Yes";
+- (IBAction)buttonPressed
+{
+    int random = arc4random_uniform(self.predictions.count);
+    self.predictionLabel.text = [self.predictions objectAtIndex:random];
+    
 }
 
 
