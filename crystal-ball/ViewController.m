@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TH8Ball.h"
 
 @interface ViewController ()
 
@@ -17,9 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.predictions = [[NSArray alloc] initWithObjects:@"It is certain",@"It is decidedly so", @"All signs say Yes", @"The stars are not alligned", @"My reply is no", @"It is doubtful", @"Better not tell you now", @"Concentrate and ask again", @"Unable to answer right now.", nil];
-    
+    self.crystalBall = [[TH8Ball alloc] init];
 
 }
 
@@ -37,9 +36,7 @@
 
 - (IBAction)buttonPressed
 {
-    int random = arc4random_uniform(self.predictions.count);
-    self.predictionLabel.text = [self.predictions objectAtIndex:random];
-    
+    self.predictionLabel.text = [self.crystalBall randomPrediction];
 }
 
 
