@@ -15,5 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 @property (strong, nonatomic) TH8Ball *crystalBall;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
 
 @end
