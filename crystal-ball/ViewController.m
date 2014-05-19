@@ -114,21 +114,14 @@
 #pragma mark - Prediction
 
 - (void) makePrediction {
+    
+    self.predictionLabel.text = @"";
+    
     [self.backgroundImageView startAnimating];
     AudioServicesPlaySystemSound(soundEffect);
     
-    int i = 0;
-    
-    while (self.backgroundImageView.animationImages == [self.backgroundImageView.animationImages objectAtIndex:i]){
-        self.predictionLabel.text = nil;
-        i++;
-        
-        if (i == 59){
-            break;
-        }
-    }
-    
     self.predictionLabel.text = [self.crystalBall randomPrediction];
+
 }
 
 - (IBAction)buttonPressed
