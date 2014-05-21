@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Jaken Herman. All rights reserved.
 //
 
+//implementing method
+
 #import <Foundation/Foundation.h>
 
 @interface TH8Ball : NSObject
