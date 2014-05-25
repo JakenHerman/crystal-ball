@@ -31,10 +31,10 @@
     
     self.crystalBall = [[TH8Ball alloc] init];
     
-    self.backgroundImageView.animationImages = [[NSArray alloc] initWithObjects:
-                                                [UIImage imageNamed: @"CB00001"],
-                                                [UIImage imageNamed: @"CB00002"],
-                                                [UIImage imageNamed: @"CB00003"],
+    self.backgroundImageView.animationImages = [[NSArray alloc] initWithObjects: // could create a for-loop instead
+                                                [UIImage imageNamed: @"CB00001"], // of individually adding all of these
+                                                [UIImage imageNamed: @"CB00002"],//images? Seems like a potentially way-more
+                                                [UIImage imageNamed: @"CB00003"], // efficient code.
                                                 [UIImage imageNamed: @"CB00004"],
                                                 [UIImage imageNamed: @"CB00005"],
                                                 [UIImage imageNamed: @"CB00006"],
